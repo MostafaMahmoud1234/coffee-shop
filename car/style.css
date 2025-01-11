@@ -1,0 +1,1294 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+  outline: none;
+  border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+  
+  
+
+}
+
+:root{
+    --yellow:#f9d806;
+    --line-yellow:#ffee80;
+    --black:var(--black);
+    --llin-color:#666;
+   --border: .1rem solid rgba(0, 0, 0, .1);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.3);
+
+}
+
+html{
+    font-size: 62.5%;
+    
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+
+}
+
+
+   
+   /*-------------------start Arrow--------------------*/
+   .button {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--yellow);
+    border: 3px solid black;
+    display: none;
+    cursor: pointer;
+   }
+
+   .button:hover{
+    background-color: #070707;
+   
+   color: white;
+ 
+   border: 5px solid yellow;
+   
+   }
+
+ /*-------------------End Arrow--------------------*/
+
+
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    background-color: var(--line-yellow);
+    color: var(--black);
+    font-weight: 700;
+    font-size: 1.7rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+
+.btn:hover{
+    background-color: var(--yellow);
+}
+
+
+.header{
+    background-color: #ffffff;
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 1.4rem 3%;
+    box-shadow: var(--box-shadow);
+    z-index: 999;
+ 
+
+   
+}
+
+
+.header .logo{
+    font-size: 2.5rem;
+    color: var(--black);
+    font-weight: bolder;
+}
+
+.header .logo span{
+color: var(--yellow);
+font-size: 3.1rem;
+}
+.header .navbar{
+    margin-top: 10px;
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: var(--black);
+    position: relative;
+
+   
+
+}
+
+
+
+.header .navbar a:hover{
+color: var(--yellow);
+
+}
+
+.header .navbar a:hover:after{
+    content: '';
+    width: 60%;
+    height: 3px;
+    background-color: #f9d806;
+    position: absolute;
+    top: 25px;
+    left: 0;
+
+
+}
+
+
+.header #login-on .btn{
+    margin-top: 0;
+}
+
+
+.header #login-on i{
+    font-size: 2.5rem;
+    color: var(--llin-color);
+    cursor: pointer;
+    display: none;
+}
+
+.header #login-on i:hover{
+    color: var(--yellow);
+}
+
+
+#menu-btn{
+    font-size: 3.5rem;
+    color: var(--llin-color);
+    cursor: pointer;
+    display: none;
+
+}
+  
+
+                     /*-----------------------*/
+                          /*------------*/
+
+/*---------------------------Start login Form-----------*/
+
+.login-form-continer{
+    position: fixed;
+    top: -105%;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, .9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+
+.login-form-continer.active{
+    top: 0;
+    opacity: 1;
+}
+
+.login-form-continer form{
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    background: #fff;
+    border: var(--border);
+    text-align: center;
+    width: 40rem;
+
+}
+
+
+.login-form-continer form .buttons{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-form-continer form  .btn{
+  display: block;
+  width: 100%;
+  margin: .5rem;
+}
+
+.login-form-continer form h3{
+    color: var(--black);
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+
+}
+
+.login-form-continer form .box{
+    margin: .7rem 0;
+    width: 100%;
+    text-transform: none;
+    color: var(--black);
+    font-size: 1.6rem;
+
+    padding: 1rem 1.2rem;
+    border:  var(--border);
+    border-radius: .5rem;
+
+
+}
+
+
+.login-form-continer form p{
+    padding:  1rem 0;
+    font-size: 1.5rem;
+    color: var(--llin-color);
+}
+
+.login-form-continer form p a{
+ 
+    color: var(--yellow);
+    text-decoration: uppercase;
+}
+
+#btn{
+    text-align: center;
+}
+
+
+
+
+
+.login-form-continer #close-login-form{
+    position: absolute;
+    top: 3rem;
+    right: 8rem;
+    font-size: 5rem;
+    color: var(--black);
+    cursor: pointer;
+
+}
+
+.home{
+    background-image: url('imeges/cars3.jpg');
+    height: 79vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+   justify-content: center;
+    display: flex;
+   
+   
+  
+   
+}
+
+.home .home-box{
+    
+    
+    margin-top: 9%;
+    z-index: 2;
+  
+    
+}
+
+.home .home-box h1{
+    font-size: 7.8rem;
+    font-family: serif;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: bolder;
+
+}
+.home .home-box h1 span{
+    color: yellow;
+    
+}
+
+.home .home-box p{
+    font-size: 1.8rem;
+   color: white;
+   line-height: 40px;
+   letter-spacing: 1px;
+    margin-top: 10px;
+  font-weight: bolder;
+    margin-bottom: 50px;
+}
+
+.home .home-box .btn{
+    height: 50px;
+    border-radius: 10px;
+    font-size: 16px;
+    
+}
+/*--------------------------------------*/
+
+
+.icons-container{
+    
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+    padding: 40px 90px;
+    
+   
+  
+    
+}
+
+.icons-container .icons{
+    display: flex;
+   
+   align-items: center;
+   padding: 2rem;
+    gap: 1.5rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+}
+
+.icons-container .icons i{
+    height: 5.5rem;
+    width: 5.5rem;
+    line-height: 5.5rem;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    background-color: #eee;
+    color: var(--black);
+    text-align: center;
+
+}
+
+
+
+.icons-container .icons .content h3{
+    color: var(--yellow);
+    font-size: 2.5rem;
+}
+
+
+.icons-container .icons .content p{
+    color: var(--llin-color);
+    font-size: 1.5rem;
+}
+
+.icons-container .icons:hover{
+    background-color: rgb(17, 17, 17);
+
+}
+
+
+.icons-container .icons:hover i{
+   color: var(--yellow);
+}
+
+
+.icons-container .icons:hover .content h3{
+   color: #fff;
+}
+
+
+.icons-container .icons:hover .content p{
+   color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------End login Form-----------*/
+
+
+
+.vehicals{
+   
+    text-align: center;
+    padding: 0px 80px;
+}
+
+.vehicals .continer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+    gap: 50px;
+ 
+   
+}
+section h1{
+    font-size: 5.5rem;
+    padding: 60px;
+    color: black;
+   font-weight: bold;
+   letter-spacing: 1px;
+
+    span{
+ 
+        color: rgb(223, 223, 51);
+        
+    }
+}
+
+.vehicals .continer .box{
+    box-shadow: var(--box-shadow);
+    padding-bottom: 20px;
+    border-radius: 20px;
+    
+ 
+}
+
+
+.vehicals .continer .box:hover{
+
+    transform: translateY(-15px);
+}
+
+
+
+
+.vehicals .continer img{
+    width: 100%;
+    border-radius: 20px;
+    height: 200px;
+}
+
+
+
+
+.vehicals .continer .box .contact h3{
+    font-size: 2.4rem;
+  padding-top: 20px;
+
+}
+
+
+.vehicals .continer .box .contact .price {
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: 20px 0;
+    color: #f9d806;
+
+
+
+    span{
+        color: black;
+        font-size: 1.7rem;
+    }
+
+}
+
+
+.vehicals .continer .box .contact p {
+    color: #1a1919;
+    font-size: 15px;
+    padding: 10px;
+}
+
+
+.vehicals .continer .box .contact p .fas{
+    color: #666;
+    font-size: 5px;
+}
+
+
+
+
+
+ /*-------------------------Start services--------------------*/
+
+
+ .Services {
+    text-align: center;
+ }
+ section h1{
+    font-size: 5.5rem;
+    padding: 60px;
+    color: black;
+   font-weight: bold;
+   letter-spacing: 1px;
+
+    span{
+ 
+        color: rgb(223, 223, 51);
+        
+    }
+ }
+.Services .box-contner{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(39rem,1fr));
+    gap: 1.6rem;
+    padding: 30px 150px;
+}
+
+.Services .box-contner .box{
+    text-align: center;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+}
+
+
+.Services .box-contner .box i{
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    font-size: 2.5rem;
+    color: var(--black);
+    background-color: var(--yellow);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+
+
+.Services .box-contner .box h3{
+    color: var(--black);
+    font-size: 2.2rem;
+}
+
+
+.Services .box-contner .box p{
+  color: var(--llin-color);
+  font-size: 1.4rem;
+  padding: 1rem 0;
+  line-height: 1.9rem;
+}
+
+.Services .box-contner .box:hover{
+background: black;
+}
+
+.Services .box-contner .box:hover h3{
+   color: white;
+}
+
+.Services .box-contner .box:hover p{
+color:#eee;
+}
+
+
+.Featured{
+    text-align: center;
+}
+
+
+
+
+
+/*------------------------------Over------------*/
+
+.over{
+    background-image: url('imeges/back5.jpg');
+    background-position: center;
+    background-size: cover;
+  height: 40vh;
+  text-align: center;
+ padding: 100px 0;
+  justify-content: center;
+  margin-top: 100px;
+
+
+
+
+  p{
+    color: white;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    font-size: 5.5rem;
+   
+   
+  span{
+    
+    color: red;
+    font-size:6rem ;
+
+}
+  }
+    
+}
+ 
+
+/*-----------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+ 
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /*------------------------------------------*/
+                      /*-----------------------*/
+                          /*------------*/
+.picture{
+   
+    margin-top: 140px;
+   
+    z-index: 1;
+}
+
+.picture .box-imge{
+    background-color: #eeeeec;
+    padding: 50px 8rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(39rem,1fr));
+    gap: 1.6rem;
+  
+   
+
+}
+
+.picture .box-imge .box{
+    border-radius: 30px;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.picture .box-imge .box:hover{
+    transform:rotate(-5deg);
+}
+
+
+.picture .box-imge .box img{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+
+
+                      
+                      
+
+     
+
+/*----------------Media Query-------------------*/
+
+
+
+
+.footer{
+    position: relative;
+    margin-top: 10px;
+   
+   
+  }
+  .footer .box-continer{
+   
+    display: flex;
+    flex-wrap: wrap;
+    position:absolute ;
+    text-align: center;
+    justify-content: center;
+    height: 40vh;
+    padding: 20px 0;
+    width: 100%;
+   gap: 20px;
+  }
+
+
+  .footer .box-continer .box{
+
+    padding: 20px;
+  }
+
+
+  .footer .box-continer .box h3{
+    color: var(--black);
+    font-size: 21px;
+    margin-bottom: 10px;
+  }
+
+  .footer .box-continer .box p{
+    color: var(--light-color);
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    margin-top: 10px;
+  }
+
+  .footer .box-continer .box .share {
+    font-size: 23px;
+    padding: 4px;
+    color: #000;
+    
+    display: flex;
+    justify-content: center;
+
+    
+  }
+
+  .footer .box-continer .box .share i{
+    padding: 3px;
+    color: black;
+    font-size: 25px;
+  }
+
+  
+  .footer .box-continer .box h4{
+   
+    color: gray;
+  }
+
+  .footer .box-continer .box i:hover{
+   
+    color: var(--orange);
+  }
+
+  .footer .box-continer .box a{
+    color: #666;
+    font-weight: bolder;
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+    
+  }
+  .footer .box-continer .box a:hover{
+    color: var(--orange);
+    cursor: pointer;
+  }
+
+
+  .footer .box-continer .box input{
+    width: 90%;
+    padding: 3px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: #ff7700a3;
+    font-size: 16px;
+    font-weight: bolder;
+   
+  }
+
+  .footer .box-continer .box button{
+    width: 40%;
+  
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 9px;
+    border: 3px solid black;
+   
+    font-size: 16px;
+    font-weight: bolder;
+   
+  }
+
+  .footer .box-continer .box button:hover{
+    background-color: var(--orange);
+    color: white;
+  }
+
+/*----------------------------------------------------------------*/
+
+
+
+
+
+
+
+@media (max-width:991px){
+ 
+
+    .vehicals .continer{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 40px;
+       
+    
+       
+    }
+    .home{
+      
+        height: 75vh;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+       justify-content: center;
+        display: flex;
+       
+       
+      
+       
+    }
+    
+    .home .home-box{
+        
+        
+        margin-top: 10%;
+      
+        
+    }
+    
+    .home .home-box h1{
+        margin-top: 30px;
+        font-size: 4.8rem;
+        font-family: serif;
+        letter-spacing: 1px;
+   
+    
+    }
+
+
+    .vehicals .continer{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 40px;
+       
+     
+       
+    }
+
+
+
+    .Services .box-contner{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
+        gap: 1.3rem;
+        padding: 30px 100px;
+     
+    }
+    
+    .Services .box-contner .box{
+        text-align: center;
+        padding: 2rem;
+        border-radius: .5rem;
+        box-shadow: var(--box-shadow);
+        border: var(--border);
+       
+    }
+
+
+    .picture{
+   
+        margin-top: 60px;
+    }
+    
+    .picture .box-imge{
+        background-color: #eeeeec;
+        padding: 50px 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+        gap: 1.3rem;
+       
+      
+       
+    
+    }
+
+    .picture .box-imge .box{
+        padding: 3px;
+    }
+   
+
+
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:860px){
+
+    #menu-btn{
+     
+        display: block;
+    
+    }
+
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
+    }
+    
+
+
+
+    .header #login-on i{
+      
+        display: block;
+    }
+
+
+    .header #login-on .btn{
+        display: none;
+    }
+
+
+    .header .navbar{
+        position: absolute;
+        top: 99%;
+        left: 0px;
+    
+        right: 0;
+        background-color: #edeaea;
+        border-top: var(--border);
+        text-align: left;
+        clip-path:polygon(0 0, 100% 0 ,100% 0, 0 0);
+        
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0 ,100% 0, 100% 100%, 0% 100%);
+    }
+
+
+
+    .header .navbar a:hover:after{
+        content: '';
+        width: 10%;
+        height: 3px;
+   
+        position: absolute;
+        top: 27px;
+        left: 0px;
+    
+    
+    }
+
+ 
+
+    .header .navbar a{
+        display: block;
+        margin: 3rem;
+        font-size: 2rem;
+    }
+
+
+
+
+
+    .home{
+     
+        height: 75vh;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+       justify-content: center;
+        display: flex;
+       
+       
+      
+       
+    }
+    
+    .home .home-box{
+        
+        
+        margin-top: 10%;
+      
+        
+    }
+    
+    .home .home-box h1{
+        margin-top: 80px;
+        font-size: 4.8rem;
+        font-family: serif;
+        letter-spacing: 1px;
+        
+        padding:0 30px ;
+    
+    }
+
+    .home .home-box p{
+        font-size: 1.9rem;
+       color: white;
+       line-height: 40px;
+       letter-spacing: 1px;
+        margin-top: 40px;
+    
+        margin-bottom: 50px;
+    }
+
+
+    section .heading{
+        text-align: center;
+        font-family:inherit;
+        padding: 30px 0;
+        font-size: 3rem;
+        
+        font-weight: bolder;
+        
+       
+        
+    }
+
+
+
+    .Services .box-contner{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(19rem,1fr));
+        gap: 1.3rem;
+        padding: 30px 70px;
+        
+    }
+    
+    .Services .box-contner .box{
+        text-align: center;
+        padding: 2rem;
+        border-radius: .5rem;
+        box-shadow: var(--box-shadow);
+        border: var(--border);
+       
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .over{
+      
+      height: 30vh;
+      text-align: center;
+     padding: 100px 6px;
+   
+      margin-top: 60px;
+    
+    
+    
+    
+      p{
+        color: white;
+        font-weight: bolder;
+        letter-spacing: 1px;
+        font-size: 2.5rem;
+       
+       
+      span{
+        
+        color: red;
+        font-size:3rem ;
+    
+    }
+      }
+        
+    }
+
+    .picture{
+   
+        margin-top: 70px;
+    }
+    
+    .picture .box-imge{
+        background-color: #eeeeec;
+        padding: 50px 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
+        gap: 1.3rem;
+       
+      
+       
+    
+    }
+
+    .picture .box-imge .box{
+        padding: 3px;
+        border-radius: 20px;
+    }
+
+    .picture .box-imge .box img{
+        border-radius: 20px;
+    }
+   
+
+    
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+       
+    
+    }
+
+
+
+    .home{
+        
+        height: 75vh;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+       justify-content: center;
+        display: flex;
+       
+       
+      
+       
+    }
+    
+    .home .home-box{
+        
+        
+        margin-top: 10%;
+        padding: 0px 10px;
+      
+        
+    }
+    
+    .home .home-box h1{
+        margin-top: 50px;
+        font-size: 4.8rem;
+        font-family: serif;
+        letter-spacing: 1px;
+        
+    
+    }
+
+    .home .home-box p{
+        font-size: 1.7rem;
+       color: white;
+       line-height: 40px;
+       letter-spacing: 1px;
+        margin-top: 40px;
+    
+        margin-bottom: 30px;
+    }
+
+
+
+    
+.icons-container{
+  
+    padding: 40px 50px;
+    
+   
+  
+    
+}
+
+
+
+.vehicals{
+   
+    text-align: center;
+    padding: 0px 30px;
+}
+
+.vehicals .continer{
+    display: grid;
+  
+    gap: 50px;
+ 
+   
+}
+.vehicals h1{
+    font-size: 2.5rem;
+    padding: 40px 3px;
+   
+   letter-spacing: 1px;
+
+    span{
+ 
+        color: rgb(223, 223, 51);
+        
+    }
+}
+
+
+
+
+.Services .box-contner{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
+    gap: 1.3rem;
+    padding: 30px 40px;
+   
+}
+
+.Services .box-contner .box{
+    text-align: center;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    
+}
+
+    
+   
+}
